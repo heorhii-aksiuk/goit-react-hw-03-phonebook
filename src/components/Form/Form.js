@@ -18,7 +18,7 @@ class Form extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { name, number } = this.state;
-    const id = nanoid();
+    const id = nanoid(10);
     const newContact = { id, name, number };
     this.props.onSubmitContact(newContact);
     this.reset();
